@@ -22,10 +22,14 @@ It'll prompt you to visit a URL, that URL will ask you to identify the app on tw
 To send a message, just run the following command:
 
 ```
-$ tweety destination_user_name "The complete message"
+$ tweety someUserName "The complete message"
 ```
 
-_Note_ that if your message is longer than 140 characters, tweety will split it into as many parts as required and it'll send all parts sequentially.
+_Note_ that if your message is longer than 140 characters, tweety will split it into as many parts as required and it'll send all parts sequentially. I should also point out, when typing the username you're sending your message to - you do **not** need to put an @ at the beginning. If you were to send a message to me (@ImJaken) then your command would look like this:
+
+```
+$ tweety ImJaken "Hey Jaken!"
+```
 
 ###Receiving / Reading
 
@@ -67,8 +71,3 @@ And you'll get something like this:
 --- [ Message from: someUser on 11/20/2013 - 4:23:12 pm ] ---
 Hey, this is your direct message!
 ```
-
-##Running this code locally
-
-If you've downloaded the code and want to try it for yourself, you'll have to register an app on the twitter dev site and rename the file under `/lib/twitter-keys-sample.json` to `/lib/twitter-keys.json` filling in the tokens required.
-
