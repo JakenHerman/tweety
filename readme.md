@@ -25,11 +25,11 @@ To send a message, just run the following command:
 $ tweety destination_user_name "The complete message"
 ```
 
-_Note_ that if your message is longer than 140 characters, TDM will split it into as many parts as required and it'll send all parts sequentially.
+_Note_ that if your message is longer than 140 characters, tweety will split it into as many parts as required and it'll send all parts sequentially.
 
 ###Receiving / Reading
 
-With TDM you can do both: listing the latest 20 messages of your inbox, or reading a specific message. 
+With tweety you can do both: listing the latest 20 messages of your inbox, or reading a specific message. 
 Here is how:
 
 ####Listing inbox
