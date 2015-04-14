@@ -1,40 +1,115 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/home/codio/.nvm/v0.10.33/bin/node',
 1 verbose cli   '/home/codio/.nvm/v0.10.33/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   '-g',
-1 verbose cli   './' ]
+1 verbose cli   'publish' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose cache add [ './', null ]
-5 verbose cache add name=undefined spec="./" args=["./",null]
-6 verbose parsed url { protocol: null,
-6 verbose parsed url   slashes: null,
-6 verbose parsed url   auth: null,
-6 verbose parsed url   host: null,
-6 verbose parsed url   port: null,
-6 verbose parsed url   hostname: null,
-6 verbose parsed url   hash: null,
-6 verbose parsed url   search: null,
-6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: './',
-6 verbose parsed url   path: './',
-6 verbose parsed url   href: './' }
-7 silly lockFile 0ee6c175- ./
-8 verbose lock ./ /home/codio/.npm/0ee6c175-.lock
-9 silly lockFile 0ee6c175- ./
-10 silly lockFile 0ee6c175- ./
-11 error addLocal Could not install ./
-12 error Error: ENOENT, open 'package.json'
-13 error If you need help, you may report this *entire* log,
-13 error including the npm and node versions, at:
-13 error     <http://github.com/npm/npm/issues>
-14 error System Linux 3.16.0-34-generic
-15 error command "/home/codio/.nvm/v0.10.33/bin/node" "/home/codio/.nvm/v0.10.33/bin/npm" "install" "-g" "./"
-16 error cwd /home/codio/workspace
-17 error node -v v0.10.33
-18 error npm -v 1.4.28
-19 error path package.json
-20 error code ENOENT
-21 error errno 34
-22 verbose exit [ 34, true ]
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/codio/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/codio/.npm/tweety/1.0.3/package.tgz', '.' ]
+11 verbose tarball /home/codio/.npm/tweety/1.0.3/package.tgz
+12 verbose folder .
+13 info prepublish tweety@1.0.3
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /home/codio/.npm/1f1177db-tar.lock
+16 silly lockFile 80ce82bf-dio-npm-tweety-1-0-3-package-tgz tar:///home/codio/.npm/tweety/1.0.3/package.tgz
+17 verbose lock tar:///home/codio/.npm/tweety/1.0.3/package.tgz /home/codio/.npm/80ce82bf-dio-npm-tweety-1-0-3-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 80ce82bf-dio-npm-tweety-1-0-3-package-tgz tar:///home/codio/.npm/tweety/1.0.3/package.tgz
+21 silly lockFile 80ce82bf-dio-npm-tweety-1-0-3-package-tgz tar:///home/codio/.npm/tweety/1.0.3/package.tgz
+22 silly lockFile 4caef8e2-e-codio-npm-tweety-1-0-3-package /home/codio/.npm/tweety/1.0.3/package
+23 verbose lock /home/codio/.npm/tweety/1.0.3/package /home/codio/.npm/4caef8e2-e-codio-npm-tweety-1-0-3-package.lock
+24 silly lockFile 4caef8e2-e-codio-npm-tweety-1-0-3-package /home/codio/.npm/tweety/1.0.3/package
+25 silly lockFile 4caef8e2-e-codio-npm-tweety-1-0-3-package /home/codio/.npm/tweety/1.0.3/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'tweety',
+28 silly publish   author: { name: 'Jaken Herman', email: 'JakenHerman7@Gmail.com' },
+28 silly publish   description: 'Use twitter through your terminal',
+28 silly publish   keywords:
+28 silly publish    [ 'tweet',
+28 silly publish      'tweety',
+28 silly publish      'direct message',
+28 silly publish      'twitter',
+28 silly publish      'command line',
+28 silly publish      'terminal' ],
+28 silly publish   version: '1.0.3',
+28 silly publish   repository: { type: 'git', url: 'https://github.com/jakenherman/tweety' },
+28 silly publish   dependencies:
+28 silly publish    { 'simple-twitter': '*',
+28 silly publish      request: '*',
+28 silly publish      lodash: '*',
+28 silly publish      querystring: '*',
+28 silly publish      async: '*',
+28 silly publish      moment: '*' },
+28 silly publish   devDependencies: { mocha: '*', istanbul: '*', should: '*' },
+28 silly publish   bin: { tweety: './bin/tweety' },
+28 silly publish   scripts: { test: 'mocha tests/ -R spec' },
+28 silly publish   readme: '#Tweety\nUse twitter through your terminal\n\n##Installing\n\n```\n$ npm install tweety -g\n```\n\n\n##Usage:\n\n###Initializing\nIdentify yourself! You\'ll only have to do this once.\n```\n$ tweety init\n```\nIt\'ll prompt you to visit a URL, that URL will ask you to identify the app on twitter, and then it\'ll show you a code. Back on the command line,  enter that code and the app will save your tokens on a local json file.\n\n###Sending:\n\nTo send a message, just run the following command:\n\n```\n$ tweety someUserName "The complete message"\n```\n\n_Note_ that if your message is longer than 140 characters, tweety will split it into as many parts as required and it\'ll send all parts sequentially. I should also point out, when typing the username you\'re sending your message to - you do **not** need to put an @ at the beginning. If you were to send a message to me (@ImJaken) then your command would look like this:\n\n```\n$ tweety ImJaken "Hey Jaken!"\n```\n\n###Receiving / Reading\n\nWith tweety you can do both: listing the latest 20 messages of your inbox, or reading a specific message. \nHere is how:\n\n####Listing inbox\nIn order to read the latest 20 messages of your inbox, just use the following command:\n\n```\n$ tweety read inbox\n```\n\nYou\'ll get a list of messages with the id of the message, the screen name of the sender, when was it send, and a small part of the text.\nSomething like this:\n\n```\n--- [ Inbox ](last 20 messages) ---\n[403959669888401400] FROM: someUser - 11/22/2013 - 4:54:25 pm - This message is too ...\n[403951109326524400] FROM: anotherUser - 11/22/2013 - 4:20:24 pm - Testing short message\n[364477670723043300] FROM: anotherUser1 - 08/5/2013 - 5:07:03 pm - Thank you so much for followin...\n[352955266691657700] FROM: ImJaken - 07/4/2013 - 10:01:07 pm - Thank you so much for followin...\n[326768482609930240] FROM: dribble - 04/23/2013 - 3:44:11 pm - Thanks for the follow! Check o...\n[315868386716430340] FROM: coderbits - 03/24/2013 - 1:51:06 pm - Here is your beta invitation f...\n\n To read the full content of a message, do: `tweety read ID` (where ID is the first number shown above)```\n```\n\n####Reading a specific message\nIf you want to the the full content of a specific message, just use the ID listed above, like this:\n\n```\n$ tweety read 315868386716430340\n```\n\nAnd you\'ll get something like this:\n\n```\n--- [ Message from: someUser on 11/20/2013 - 4:23:12 pm ] ---\nHey, this is your direct message!\n```\n',
+28 silly publish   readmeFilename: 'readme.md',
+28 silly publish   gitHead: '647a0559f8cae4293be69e25c975382dbaa2d1ca',
+28 silly publish   bugs: { url: 'https://github.com/jakenherman/tweety/issues' },
+28 silly publish   homepage: 'https://github.com/jakenherman/tweety',
+28 silly publish   _id: 'tweety@1.0.3',
+28 silly publish   _shasum: 'eef66e3e02f953d74d813da036860bbdb6603f1d',
+28 silly publish   _from: '.' }
+29 verbose request where is /tweety
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 0fc7998c34e24696
+32 verbose url raw /tweety
+33 verbose url resolving [ 'https://registry.npmjs.org/', './tweety' ]
+34 verbose url resolved https://registry.npmjs.org/tweety
+35 verbose request where is https://registry.npmjs.org/tweety
+36 info trying registry request attempt 1 at 16:11:38
+37 http PUT https://registry.npmjs.org/tweety
+38 http 403 https://registry.npmjs.org/tweety
+39 verbose headers { date: 'Tue, 14 Apr 2015 16:11:39 GMT',
+39 verbose headers   server: 'Apache',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '95',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   'x-served-by': 'cache-jfk1029-JFK',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1429027898.499004,VS0,VE995',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 error publish Failed PUT 403
+41 error Error: "You cannot publish over the previously published version 1.0.3." : tweety
+41 error     at RegClient.<anonymous> (/home/codio/.nvm/v0.10.33/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/home/codio/.nvm/v0.10.33/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/home/codio/.nvm/v0.10.33/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/home/codio/.nvm/v0.10.33/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/home/codio/.nvm/v0.10.33/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:943:16
+41 error     at process._tickCallback (node.js:419:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Linux 3.16.0-34-generic
+44 error command "/home/codio/.nvm/v0.10.33/bin/node" "/home/codio/.nvm/v0.10.33/bin/npm" "publish"
+45 error cwd /home/codio/workspace
+46 error node -v v0.10.33
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
