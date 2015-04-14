@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>tweety by JakenHerman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">tweety</h1>
+      <h2 class="project-tagline">use twitter through command line</h2>
+      <a href="https://github.com/JakenHerman/tweety" class="btn">View on GitHub</a>
+      <a href="https://github.com/JakenHerman/tweety/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/JakenHerman/tweety/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="tweety" class="anchor" href="#tweety" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tweety</h1>
+
+<p>Use twitter through your terminal</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h2>
+
+<pre><code>$ npm install tweety -g
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h2>
+
+<h3>
+<a id="initializing" class="anchor" href="#initializing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initializing</h3>
+
+<p>Identify yourself! You'll only have to do this once.</p>
+
+<pre><code>$ tweety init
+</code></pre>
+
+<p>It'll prompt you to visit a URL, that URL will ask you to identify the app on twitter, and then it'll show you a code. Back on the command line,  enter that code and the app will save your tokens on a local json file.</p>
+
+<h3>
+<a id="sending" class="anchor" href="#sending" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending:</h3>
+
+<p>To send a message, just run the following command:</p>
+
+<pre><code>$ tweety someUserName "The complete message"
+</code></pre>
+
+<p><em>Note</em> that if your message is longer than 140 characters, tweety will split it into as many parts as required and it'll send all parts sequentially. I should also point out, when typing the username you're sending your message to - you do <strong>not</strong> need to put an @ at the beginning. If you were to send a message to me (@ImJaken) then your command would look like this:</p>
+
+<pre><code>$ tweety ImJaken "Hey Jaken!"
+</code></pre>
+
+<h3>
+<a id="receiving--reading" class="anchor" href="#receiving--reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Receiving / Reading</h3>
+
+<p>With tweety you can do both: listing the latest 20 messages of your inbox, or reading a specific message. 
+Here is how:</p>
+
+<h4>
+<a id="listing-inbox" class="anchor" href="#listing-inbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>Listing inbox</h4>
+
+<p>In order to read the latest 20 messages of your inbox, just use the following command:</p>
+
+<pre><code>$ tweety read inbox
+</code></pre>
+
+<p>You'll get a list of messages with the id of the message, the screen name of the sender, when was it send, and a small part of the text.
+Something like this:</p>
+
+<pre><code>--- [ Inbox ](last 20 messages) ---
+[403959669888401400] FROM: someUser - 11/22/2013 - 4:54:25 pm - This message is too ...
+[403951109326524400] FROM: anotherUser - 11/22/2013 - 4:20:24 pm - Testing short message
+[364477670723043300] FROM: anotherUser1 - 08/5/2013 - 5:07:03 pm - Thank you so much for followin...
+[352955266691657700] FROM: ImJaken - 07/4/2013 - 10:01:07 pm - Thank you so much for followin...
+[326768482609930240] FROM: dribble - 04/23/2013 - 3:44:11 pm - Thanks for the follow! Check o...
+[315868386716430340] FROM: coderbits - 03/24/2013 - 1:51:06 pm - Here is your beta invitation f...
+
+ To read the full content of a message, do: `tweety read ID` (where ID is the first number shown above)```
+</code></pre>
+
+<h4>
+<a id="reading-a-specific-message" class="anchor" href="#reading-a-specific-message" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading a specific message</h4>
+
+<p>If you want to the the full content of a specific message, just use the ID listed above, like this:</p>
+
+<pre><code>$ tweety read 315868386716430340
+</code></pre>
+
+<p>And you'll get something like this:</p>
+
+<pre><code>--- [ Message from: someUser on 11/20/2013 - 4:23:12 pm ] ---
+Hey, this is your direct message!
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JakenHerman/tweety">tweety</a> is maintained by <a href="https://github.com/JakenHerman">JakenHerman</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
