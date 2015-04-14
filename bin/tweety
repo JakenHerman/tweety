@@ -7,7 +7,7 @@ var twitterApi = require("../lib/twitter.js"),
 var arguments = process.argv.slice(2);
 
 if(arguments.length == 0) {
-    console.log("Twitter Direct Messaging (tdm) helps you send and read direct messages from the command line.");
+    console.log("tweety (tweety) allows you to use twitter through your terminal.");
     console.log("Commands: ");
     console.log(" - init: Needs to be executed the first time, to setup the user's twitter credentials");
     console.log(" - read [inbox]: Lists the last 20 messages in your inox");

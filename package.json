@@ -3,7 +3,7 @@
     "author": "Jaken Herman <JakenHerman7@Gmail.com>",
     "description": "Use twitter through your terminal",
     "keywords": ["tweet", "tweety", "direct message", "twitter", "command line", "terminal"],
-    "version": "0.0.1",
+    "version": "1.0.2",
     "repository":  {
         "type": "git",
         "url": "https://github.com/jakenherman/tweety"
@@ -22,7 +22,7 @@
         "should": "*"
     },
     "bin": {
-        "tdm": "./bin/tdm"
+        "tweety": "./bin/tweety"
     },
     "scripts": {
         "test": "mocha tests/ -R spec"
