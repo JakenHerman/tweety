@@ -6,7 +6,7 @@ describe("Send Command", function() {
 
 
 	var cmd = null,
-		destination = "deleteman123",
+		destination = "imjaken
 		msg = "test";
 
 	beforeEach(function() {

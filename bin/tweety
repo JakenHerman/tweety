@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('../newrelic.js');
 var twitterApi = require("../lib/twitter.js"),
     ViewHandler = require("../lib/viewHandler"),
     CommandFactory = require("../lib/commandFactory");
@@ -36,7 +36,8 @@ if(init) {
                 });
             });
         });
-} else {
+} 
+else {
     var command = CommandFactory.getCommand(arguments);
     command.run(function(err, result) {
         ViewHandler.show(err, command, result);
