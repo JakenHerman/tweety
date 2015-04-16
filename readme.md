@@ -1,3 +1,6 @@
+[![npm status](http://img.shields.io/npm/v/tweety.svg)](https://www.npmjs.org/package/tweety)
+[![npm status](https://img.shields.io/npm/dm/tweety.svg)](https://www.npmjs.org.package/tweety)
+
 #Tweety
 Use twitter through your terminal
 
