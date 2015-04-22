@@ -50,22 +50,15 @@ You'll get a list of messages with the id of the message, the screen name of the
 Something like this:
 
 ```
---- [ Inbox ](last 20 messages) ---
-[403959669888401400] FROM: someUser - 11/22/2013 - 4:54:25 pm - This message is too ...
-[403951109326524400] FROM: anotherUser - 11/22/2013 - 4:20:24 pm - Testing short message
-[364477670723043300] FROM: anotherUser1 - 08/5/2013 - 5:07:03 pm - Thank you so much for followin...
-[352955266691657700] FROM: ImJaken - 07/4/2013 - 10:01:07 pm - Thank you so much for followin...
-[326768482609930240] FROM: dribble - 04/23/2013 - 3:44:11 pm - Thanks for the follow! Check o...
-[315868386716430340] FROM: coderbits - 03/24/2013 - 1:51:06 pm - Here is your beta invitation f...
-
- To read the full content of a message, do: `tweety read ID` (where ID is the first number shown above)```
+--- [ Inbox ]
+[403959669888401400] FROM: someUser - 11/22/2013 - 4:54:25 pm - Hey, this is your d...
 ```
 
 ####Reading a specific message
 If you want to the the full content of a specific message, just use the ID listed above, like this:
 
 ```
-$ tweety read 315868386716430340
+$ tweety read 403959669888401400
 ```
 
 And you'll get something like this:
